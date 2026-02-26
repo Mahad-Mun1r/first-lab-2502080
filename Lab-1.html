@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web tech lab-1</title>
+    </head>
+    <body>
+        
+       
+        <script>
+        
+        //------------------- Task - 1 -----------------
+        //DIFFEREBCE BETWEEN CONST AND LET
+            //const variable cannot be reassigned while let variable can.
+            const name="Mahad";
+            let age= 19;
+            //Here the age is reassigned
+            age=20;
+            //the following line causes error
+            //name="taha";
+            console.log(name);
+            console.log(age); 
+            
+        //------------------- Task - 2 -----------------
+        //aRROW FUNCTION AND TEMPLATE LITERALS     
+            //Traditional function
+            function area(l,w){
+                return l * w;
+            }
+            //With arrow function
+            const area1 = (l , w)=> l * w;
+            //Using the function
+            const totalarea= area1(4,6);
+            //Using template literal
+            const display=`The area is ${totalarea} sq m.`;
+            console.log(display);
+
+            //.......STUDENT TASK.......
+            const greet=(name)=> name;
+            const greetings =greet("Mahad");
+            const message =`Hello, ${name} Welcome back!`;
+            console.log(message);
+
+
+        //-------------------- Task - 3 -----------------
+        //PRACITAL DESTRUCTURE AND SPREAD OPERATOR
+            
+            //profile (Structures)
+            const myprofile={
+                Name:"Mahad Munir", age:19, city:"Islamabad"
+            };
+            //destructing to get any properties
+            const {Name, city}= myprofile;
+            console.log(Name); 
+            console.log(city);
+            //Favourite foods (Array)
+            const favouritefood = ["Biryani","Samosa"];
+            //adding new food without disturbing the orignal array
+            const allfoods =[...favouritefood,"Karahi"];
+            console.log(favouritefood); 
+            console.log(allfoods);  //favouritefood along with the added object
+
+            //........STUDENT TASK........
+            //Destructing
+            const profile={
+                id:250, name1:"Mahad", grade:"A"
+            };
+            const {id, name1}= profile;
+            console.log(name1); console.log(id);
+            //Spread Operator
+            const tasks=["Homework","Chores"];
+            const alltasks =[...tasks,"Read"];
+            console.log(tasks);
+            console.log(alltasks);
+        
+        //---------------------Task - 4------------------
+        //THE POWER OF .map()
+            
+            const products=["Laptop","Mouse","Keyboard"];
+            const productslistitems=products.map(product=>`<li>${product}</li>`);
+            console.log(productslistitems);
+        
+            //.........STUDENT TASK...........
+            const numbers = [10, 20, 30];
+            const doubledNumbers = numbers.map(num => num * 2);
+            console.log(doubledNumbers); 
+            // Output: [20, 40, 60]
+        
+        //---------------------Task - 5-------------------
+        //FILTERING DATA WITH .filter()
+
+
+
+
+
+        </script>
+    </body>
+</html>
